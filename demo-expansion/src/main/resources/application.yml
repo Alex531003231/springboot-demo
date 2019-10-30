@@ -1,0 +1,7 @@
+demo:
+  value-property: value-test1
+  beanProperty1: beanValue1
+  beanProperty2: true
+spring:
+  profiles:
+    active: dev
