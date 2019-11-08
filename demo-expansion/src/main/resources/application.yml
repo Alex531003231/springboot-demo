@@ -2,6 +2,12 @@ demo:
   value-property: value-test1
   beanProperty1: beanValue1
   beanProperty2: true
-spring:
-  profiles:
-    active: dev
+#spring:
+#  profiles:
+#    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
