@@ -9,6 +9,7 @@ target/
 
 # idea ignore
 .idea/
+.mvn/
 *.ipr
 *.iml
 *.iws
