@@ -36,10 +36,10 @@ public class IdCardUtilTest {
         DateTime date = DateUtil.parse("2019-11-19");
         int age = IdcardUtil.getAgeByIdCard(cardId, date);
         Console.log("年龄："+age);
-
+        //获取生日
         String birth = IdcardUtil.getBirthByIdCard(cardId);
         Console.log("生日："+birth);
-
+        //获取省份
         String province = IdcardUtil.getProvinceByIdCard(cardId);
         Console.log("省份："+province);
 
