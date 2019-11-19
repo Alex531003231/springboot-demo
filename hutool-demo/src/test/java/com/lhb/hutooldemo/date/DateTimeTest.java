@@ -1,7 +1,9 @@
 package com.lhb.hutooldemo.date;
 
+import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateTime;
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.date.Month;
 import cn.hutool.core.lang.Console;
 import org.junit.jupiter.api.Test;
 
@@ -25,8 +27,23 @@ public class DateTimeTest {
     @Test
     public void test01(){
         Date date = new Date();
+        //new 方式创建
         DateTime dateTime = new DateTime(date);
         Console.log("dateTime--->"+dateTime);
+        //of方式创建
+        DateTime dt = DateTime.of(date);
+        Console.log("log--->"+dt);
     }
+
+    @Test
+    public void test02(){
+        DateTime dateTime = new DateTime("2017-01-05 12:34:23", DatePattern.NORM_DATETIME_FORMAT);
+        int year = dateTime.year();
+        Month month = dateTime.monthEnum();
+        int day = dateTime.dayOfMonth();
+        Console.log(year+"年"+month+"月"+day+"日");
+    }
+
+
 
 }
